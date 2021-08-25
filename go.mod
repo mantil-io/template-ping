@@ -3,11 +3,24 @@ module github.com/mantil-io/go-mantil-template
 go 1.16
 
 require (
+	github.com/ajg/form v1.5.1 // indirect
 	github.com/aws/aws-lambda-go v1.26.0 // indirect
-	github.com/aws/aws-sdk-go-v2/config v1.6.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/lambda v1.6.0 // indirect
+	github.com/aws/aws-sdk-go-v2/config v1.6.1 // indirect
+	github.com/aws/aws-sdk-go-v2/service/lambda v1.7.0 // indirect
+	github.com/fatih/structs v1.1.0 // indirect
+	github.com/gavv/httpexpect v2.0.0+incompatible // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.4 // indirect
-	github.com/mantil-io/mantil.go v0.0.0-20210823083803-dbe3ec2da9ee
+	github.com/mantil-io/mantil.go v0.0.0-20210824165339-1bd1f5e04e62
+	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/jsm.go v0.0.25 // indirect
-	golang.org/x/crypto v0.0.0-20210813211128-0a44fdfbc16e // indirect
+	github.com/sergi/go-diff v1.2.0 // indirect
+	github.com/valyala/fasthttp v1.29.0 // indirect
+	github.com/xeipuuv/gojsonschema v1.2.0 // indirect
+	github.com/yalp/jsonpath v0.0.0-20180802001716-5cc68e5049a0 // indirect
+	github.com/yudai/gojsondiff v1.0.0 // indirect
+	github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 // indirect
+	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 )
