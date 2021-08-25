@@ -8,8 +8,6 @@ import (
 	"github.com/mantil-io/go-mantil-template/api/ping"
 )
 
-var apiURL = "TODO"
-
 func TestPing(t *testing.T) {
 	api := httpexpect.New(t, apiURL)
 
