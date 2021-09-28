@@ -39,7 +39,7 @@ func TestPing(t *testing.T) {
 	// method which returns error
 	api.POST("/ping/reqrsp2").
 		Expect().
-		ContentType("application/json").
+		ContentType("").
 		Status(http.StatusInternalServerError).
 		Header("x-api-error").Equal("request not found")
 
