@@ -14,7 +14,7 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
-	github.com/mantil-io/mantil.go v0.0.0-20211027185548-791549a25f40
+	github.com/mantil-io/mantil.go v0.0.0-20211103211505-2a8030c7c2c3
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/jsm.go v0.0.26 // indirect
