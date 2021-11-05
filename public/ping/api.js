@@ -1,5 +1,5 @@
 function ping() {
-    fetch('/main/ping', {
+    fetch('/ping', {
         method: 'POST'
     }).then(rsp => {
         rsp.text().then(rspText => {

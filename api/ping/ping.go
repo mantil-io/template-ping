@@ -3,6 +3,7 @@ package ping
 import (
 	"context"
 	"fmt"
+	"log"
 )
 
 type Ping struct{}
@@ -52,3 +53,15 @@ func (p *Ping) ReqRsp2(ctx context.Context, req *Request) (*Response, error) {
 	}
 	return &Response{Response: "Hello, " + req.Name}, nil
 }
+
+// example of getting function logs in invoke
+// test with:
+//   mantil invoke ping/logs --data '{"name":"Foo"}'
+// You should see each log line before result.
+func (p *Ping) Logs(ctx context.Context, req Request) (Response, error) {
+	log.Printf("start Logs method")
+	defer log.Printf("end")
+	log.Printf("req.Name: '%s'", req.Name)
+	return Response{Response: "Hello, " + req.Name}, nil
+}
+
