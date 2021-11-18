@@ -8,13 +8,16 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.9.0 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue v1.3.0 // indirect
 	github.com/aws/aws-sdk-go-v2/service/lambda v1.10.0 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sqs v1.9.0 // indirect
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/gavv/httpexpect v2.0.0+incompatible
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
-	github.com/mantil-io/mantil.go v0.0.0-20211103222953-486b32975598
+	github.com/mantil-io/mantil.go v0.1.2
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/jsm.go v0.0.26 // indirect

@@ -125,6 +125,8 @@ github.com/mantil-io/mantil.go v0.0.0-20211103211505-2a8030c7c2c3 h1:+QqWDOhNPr/
 github.com/mantil-io/mantil.go v0.0.0-20211103211505-2a8030c7c2c3/go.mod h1:OF2aNhglDsVBPFPsTyztc00CFdu924SV4Tn4jOLlMpA=
 github.com/mantil-io/mantil.go v0.0.0-20211103222953-486b32975598 h1:zkDn3zmhIBGMMn4kXfKyEiE5QdHgsPaA+oPFH3lC8xc=
 github.com/mantil-io/mantil.go v0.0.0-20211103222953-486b32975598/go.mod h1:OF2aNhglDsVBPFPsTyztc00CFdu924SV4Tn4jOLlMpA=
+github.com/mantil-io/mantil.go v0.1.2 h1:8eajADC/OvQyf/cOLnWpzeED6X0WzRYnSji015fjwuE=
+github.com/mantil-io/mantil.go v0.1.2/go.mod h1:2UUHFWUJKzjUWGW85hqQbQ3jxjijtZShl9ixoGbmOBI=
 github.com/mattn/go-colorable v0.1.8 h1:c1ghPdyEDarC70ftn0y+A/Ee++9zz8ljHG1b13eJ0s8=
 github.com/mattn/go-colorable v0.1.8/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
 github.com/mattn/go-isatty v0.0.12 h1:wuysRhFDzyxgEmMf5xjvJ2M9dZoWAXNNr5LSBS7uHXY=
