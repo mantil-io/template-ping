@@ -18,7 +18,7 @@ specific region of an AWS Account.
 
 To setup new node run something like:
 
-``` sh
+``` 
 ➜ mantil aws install try-ping --aws-profile org5
 ```
 
@@ -32,7 +32,7 @@ For in depth explanation of setting up Mantil node see [this](todo) instructions
 
 Create your Mantil project from the ping template:
 
-``` sh
+``` 
 ➜ mantil new my-ping --from https://github.com/mantil-io/template-ping
 
 Creating my-ping in /tmp/my-ping...
@@ -47,10 +47,9 @@ repository. _my-ping_ is the folder and the name of the Mantil project.
 For all project command ensure that you are positioned somewhere in the project
 folder tree.
 
-``` sh
+``` 
 cd my-ping
 ```
-    
 
 ## Project stage
 
@@ -60,7 +59,6 @@ for each developer, integration stage, production...
 
 Stage is created on the Mantil node. So you need to specify node when creating
 new stage.
-
 
 ```
 ➜ mantil stage new development --node try-ping
@@ -89,7 +87,7 @@ This creates resources on AWS. Most importantly Lambda function for each of you
 API's and an API Gateway to expose those functions on an URL. That URL is shown
 at the end of command and could be found any time by:
 
-``` sh
+``` 
 ➜ mantil env --url
 https://qd3tidvbuf.execute-api.eu-central-1.amazonaws.com
 ```
@@ -102,7 +100,7 @@ Default method. All other exported methods have URL _[endpoint]/ping/[method]_.
 
 You can use curl to reach API methods:
 
-``` sh
+``` 
 ➜ curl -X POST $(mantil env --url)/ping
 pong
 
@@ -115,7 +113,7 @@ Hello, Foo
 
 Easier and with added features way is to use `mantil invoke` command:
 
-``` sh
+``` 
 ➜ mantil invoke ping
 200 OK
 pong
@@ -131,7 +129,7 @@ Hello, Bar
 
 If the response is JSON invoke will pretty print that:
 
-``` sh
+``` 
 ➜ mantil invoke ping/reqrsp --data '{"name":"Bar"}'
 200 OK
 {
@@ -141,7 +139,7 @@ If the response is JSON invoke will pretty print that:
 
 Invoke will show Lambda function logs during function execution. 
 
-``` sh
+``` 
 ➜ mantil invoke ping/logs --data '{"name":"Bar"}'
 λ start Logs method
 λ req.Name: 'Bar'
@@ -154,9 +152,9 @@ Invoke will show Lambda function logs during function execution.
 
 ## Deploy 
 
-Make some trivial change in the api/ping/ping.go. For example change return of
-the Default method to something other than "ping" string. Execute `mantil
-deploy` to update stage.
+Make some change in the _api/ping/ping.go_. For example change return of the
+Default method to something other than _"ping"__ string. Execute `mantil deploy` to
+update stage.
 
 ``` 
 ➜ mantil deploy
@@ -173,15 +171,14 @@ Deploy successful!
 Build time: 697ms, upload: 2.599s (5.3 MiB), update: 1.531s
 ```
 
-Deploy consists of three stages. First it builds Lambda function binary from
-API's code. Second it uploads every changed binary to S3. And in third stage
+Deploy consists of three parts. First it builds Lambda function binary from
+API's code. Second it uploads every changed binary to S3. And in third part
 updates Lambda function with new binary.
-
 
 To support iterative build/test cycle there is `mantil watch` command. It will
 watch project folder for changes. On each file save it will start new deploy.
-You can configure watch to make invoke or run test after deploy. Check `mantil
-watch --help`
+You can configure watch to execute invoke or run test after deploy. Check
+`mantil watch --help` for details.
 
 Here is example of a watch cycle where I changed response of ReqRsp method two
 times. Every file save triggered deploy and invoke after that.
@@ -236,22 +233,21 @@ Watching changes in /tmp/my-ping
 
 ## Test
 
-/test folder contains example of end to end test for Mantil project. Those tests
-are using current stage endpoint to execute methods and examine returned
+_/test_ folder contains example of end to end tests for Mantil project. Those
+tests are using current stage endpoint to execute methods and examine returned
 results.
 
-If you were following this tutorial you probable make some changes in the
+If you were following this tutorial you probable made some changes in the
 original method output so the tests will fail. Run `mantil test` to check that.
 
 Running tests after each change in watch cycle is supported by `mantil watch --test`.
 
-
 ## Cleanup
 
-We created a node and a stage to you AWS account. To remove that and leave
-account in original state destroy stage and node. Commands are:
+We created a node and a stage in your AWS account. To remove that and leave
+account in original state destroy stage and node. Commands for that are:
 
-``` sh
+``` 
 ➜ mantil stage destroy development
 
 ➜ mantil aws uninstall try-ping --aws-profile org5
