@@ -4,7 +4,7 @@ This tutorial will walk you through main concepts of a Mantil project.
 
 ## Prerequisites
 
- * Mantil command line tool - [install](https://github.com/mantil-io/mantil-docs#installation) instructions
+ * Mantil command line tool - [install instructions](https://github.com/mantil-io/mantil-docs#installation)
  * [Go](https://golang.org) 
  * access to an AWS account
  
@@ -19,10 +19,10 @@ specific region of an AWS Account.
 To setup new node run something like:
 
 ``` sh
-mantil aws install try-ping --aws-profile org5
+➜ mantil aws install try-ping --aws-profile org5
 ```
 
-This will setup node named try-ping in my AWS account and region defined in my
+This will setup node named try-ping in AWS account and region defined in my
 org5 AWS profile. There are various options how you can provide AWS credentials
 for setting up new node to Mantil. Use `mantil aws install --help` to view them.
 
@@ -42,7 +42,7 @@ Your project is ready in /tmp/my-ping
 ```
 
 This command clones [template-ping](https://github.com/mantil-io/template-ping)
-repository. my-ping is the folder and the name of the Mantil project.
+repository. _my-ping_ is the folder and the name of the Mantil project.
 
 For all project command ensure that you are positioned somewhere in the project
 folder tree.
@@ -54,7 +54,7 @@ cd my-ping
 
 ## Project stage
 
-The next step is to create first stage for the project. Stages are actual
+Next step is to create first stage for the project. Stages are actual
 installations of the project in AWS. A project can have multiple stages.A stage
 for each developer, integration stage, production...
 
@@ -62,7 +62,7 @@ Stage is created on the Mantil node. So you need to specify node when creating
 new stage.
 
 
-``` sh
+```
 ➜ mantil stage new development --node try-ping
 Using node try-ping for new stage
 
@@ -85,7 +85,7 @@ Stage development is ready!
 Endpoint: https://qd3tidvbuf.execute-api.eu-central-1.amazonaws.com
 ```
 
-This creates resources on AWS most importantly Lambda function for each of you
+This creates resources on AWS. Most importantly Lambda function for each of you
 API's and an API Gateway to expose those functions on an URL. That URL is shown
 at the end of command and could be found any time by:
 
@@ -96,9 +96,9 @@ https://qd3tidvbuf.execute-api.eu-central-1.amazonaws.com
 
 ## Invoke API method
 
-This project has only one API. All API's are in project /api folder. Ping API is
-in /api/ping folder. It is exposed at [endpoint]/ping URL. That URL leads to the
-Default method. All other exported methods have URL [endpoint]/ping/[method].
+This project has only one API. All API's are in project _/api_ folder. Ping API is
+in _/api/ping_ folder. It is exposed at _[endpoint]/ping_ URL. That URL leads to the
+Default method. All other exported methods have URL _[endpoint]/ping/[method]_.
 
 You can use curl to reach API methods:
 
@@ -158,7 +158,7 @@ Make some trivial change in the api/ping/ping.go. For example change return of
 the Default method to something other than "ping" string. Execute `mantil
 deploy` to update stage.
 
-``` sh
+``` 
 ➜ mantil deploy
 ==> Building...
 ping
@@ -186,7 +186,7 @@ watch --help`
 Here is example of a watch cycle where I changed response of ReqRsp method two
 times. Every file save triggered deploy and invoke after that.
 
-``` sh
+```
 ➜ mantil watch --method ping/reqrsp --data '{"name": "Foo"}'
 
 Watching changes in /tmp/my-ping
