@@ -1,6 +1,6 @@
 ## About
 
-This tutorial will walk you through main concepts of a Mantil project.
+This tutorial will walk you through main concepts of a [Mantil](www.mantil.com) project.
 
 ## Prerequisites
 
