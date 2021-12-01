@@ -15,7 +15,7 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
-	github.com/mantil-io/mantil.go v0.1.5
+	github.com/mantil-io/mantil.go v0.1.6
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/nats-io/nats-server/v2 v2.4.1-0.20210907200628-874c79fe411f // indirect
